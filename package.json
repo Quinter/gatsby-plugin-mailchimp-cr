@@ -13,8 +13,7 @@
         "test": "jest",
         "build": "babel src -d .",
         "watch": "babel src -d . -w",
-        "publish": "yarn build && npm publish",
-        "precommit": "lint-staged"
+        "publish": "yarn build && npm publish"
     },
     "repository": {
         "type": "git",
@@ -46,17 +45,5 @@
         "lint-staged": "^8.1.5",
         "prettier": "^1.17.0",
         "webpack": "^4.29.6"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "yarn precommit"
-        }
-    },
-    "lint-staged": {
-        "*.js": [
-            "eslint --fix",
-            "prettier --write",
-            "git add"
-        ]
     }
 }
